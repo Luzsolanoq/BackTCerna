@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('razon_social', 150)->nullable();
             $table->string('telefono', 15)->nullable();
             $table->string('direccion', 150)->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

@@ -12,7 +12,7 @@ class Encomienda extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'costo_total', 'estado_envio', 'fecha_registro', 'id_remitente', 'id_destinatario', 'id_viaje', 'id_empresa'
+        'costo_total', 'estado_envio', 'fecha_registro','hora_registro', 'id_remitente', 'id_destinatario', 'id_viaje', 'id_empresa'
     ];
 
     // Relación con remitente (una encomienda tiene un remitente que es un cliente)

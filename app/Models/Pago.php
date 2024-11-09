@@ -12,7 +12,7 @@ class Pago extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id_encomienda', 'id_venta_pasaje', 'monto', 'metodo_pago', 'estado', 'fecha_pago'
+        'id_encomienda', 'id_venta_pasaje', 'monto', 'metodo_pago', 'estado', 'fecha_pago','hora_pago'
     ];
 
     // Relación con encomienda (un pago puede estar asociado a una encomienda)

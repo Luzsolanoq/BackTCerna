@@ -12,7 +12,7 @@ class Viaje extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'fecha', 'hora', 'id_chofer', 'id_vehiculo', 'estado'
+        'fecha_partida', 'hora_partidad','fecha_llegada', 'hora_llegada', 'id_chofer', 'id_vehiculo', 'estado'
     ];
 
     // Relación con chofer (un viaje tiene un chofer, que es un usuario)

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('peso', 10, 2);
             $table->decimal('costo', 10, 2);
             $table->foreignId('id_encomienda')->constrained('encomiendas')->onDelete('cascade');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

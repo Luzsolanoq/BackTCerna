@@ -12,7 +12,7 @@ class Auditoria extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'tabla', 'operacion', 'id_registro', 'usuario_id', 'fecha', 'detalles'
+        'tabla', 'operacion', 'id_registro', 'usuario_id', 'fecha','hora', 'detalles'
     ];
 
     // Relación con usuario (una auditoría pertenece a un usuario)

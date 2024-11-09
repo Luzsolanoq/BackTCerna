@@ -14,9 +14,10 @@ return new class extends Migration
             $table->string('operacion');
             $table->string('id_registro');
             $table->foreignId('usuario_id')->constrained('usuarios')->onDelete('cascade');
-            $table->timestamp('fecha')->useCurrent();
+            $table->date('fecha')->default(DB::raw('CURRENT_DATE')); // Solo la fecha actual
+            $table->time('hora')->default(DB::raw('CURRENT_TIME'));  // Solo la hora actual
             $table->text('detalles')->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

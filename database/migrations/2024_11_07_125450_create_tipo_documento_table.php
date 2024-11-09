@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 50);
             $table->string('descripcion', 100)->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('viajes', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha');
-            $table->time('hora');
+            $table->date('fecha_partida');
+            $table->time('hora_partida');
+            $table->date('fecha_llegada');
+            $table->time('hora_llegada');
             $table->foreignId('id_chofer')->nullable()->constrained('usuarios')->onDelete('set null');  // Añadir nullable()
             $table->foreignId('id_vehiculo')->nullable()->constrained('vehiculos')->onDelete('set null');  // Añadir nullable()
             $table->string('estado', 15)->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

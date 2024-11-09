@@ -12,12 +12,13 @@ return new class extends Migration
             $table->id();
             $table->decimal('costo_total', 10, 2)->default(0);
             $table->string('estado_envio', 15)->nullable();
-            $table->timestamp('fecha_registro')->useCurrent();
+            $table->date('fecha_registro')->default(DB::raw('CURRENT_DATE')); // Solo la fecha actual
+            $table->time('hora_registro')->default(DB::raw('CURRENT_TIME'));  // Solo la hora actual
             $table->foreignId('id_remitente')->constrained('clientes')->onDelete('cascade');
             $table->foreignId('id_destinatario')->constrained('clientes')->onDelete('cascade');
             $table->foreignId('id_viaje')->nullable()->constrained('viajes')->onDelete('set null');
             $table->foreignId('id_empresa')->nullable()->constrained('clientes')->onDelete('set null');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

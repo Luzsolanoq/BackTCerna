@@ -15,8 +15,9 @@ return new class extends Migration
             $table->decimal('monto', 10, 2);
             $table->string('metodo_pago', 50);
             $table->string('estado', 15)->nullable();
-            $table->timestamp('fecha_pago')->useCurrent();
-            $table->timestamps();
+            $table->date('fecha_pago')->default(DB::raw('CURRENT_DATE')); // Solo la fecha actual
+            $table->time('hora_pago')->default(DB::raw('CURRENT_TIME'));  // Solo la hora actual
+            //$table->timestamps();
         });
     }
 

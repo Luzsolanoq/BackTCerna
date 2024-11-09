@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('roles', RoleController::class);
 Route::apiResource('permisos', PermisoController::class);
-Route::apiResource('rolespermisos', RolPermisoController::class);
+Route::apiResource('roles_permisos', RolPermisoController::class);
 /* Route::apiResource('clientes', ClientesController::class);
 Route::apiResource('vehiculos', VehiculosController::class);
 Route::apiResource('auditoria', AuditoriaController::class)->only(['index', 'show']);

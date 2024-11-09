@@ -12,7 +12,7 @@ class VentaPasaje extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id_viaje', 'id_cliente', 'costo', 'fecha_venta', 'estado', 'id_empresa'
+        'id_viaje', 'id_cliente', 'costo', 'fecha_venta','hora_venta', 'estado', 'id_empresa'
     ];
 
     // Relación con cliente (una venta de pasaje pertenece a un cliente)

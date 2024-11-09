@@ -13,10 +13,11 @@ return new class extends Migration
             $table->foreignId('id_viaje')->constrained('viajes')->onDelete('cascade');
             $table->foreignId('id_cliente')->constrained('clientes')->onDelete('cascade');
             $table->decimal('costo', 10, 2);
-            $table->timestamp('fecha_venta')->useCurrent();
+            $table->date('fecha_venta')->default(DB::raw('CURRENT_DATE')); // Solo la fecha actual
+            $table->time('hora_venta')->default(DB::raw('CURRENT_TIME'));  // Solo la hora actual
             $table->string('estado', 15)->nullable();
             $table->foreignId('id_empresa')->nullable()->constrained('clientes')->onDelete('set null');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('tipo', 20);
             $table->decimal('capacidad_peso', 10, 2)->nullable();
             $table->integer('capacidad_personas')->default(4);
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

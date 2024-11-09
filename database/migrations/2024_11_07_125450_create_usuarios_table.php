@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('celular', 15)->nullable();
             $table->foreignId('id_rol')->constrained('roles')->onDelete('cascade');
             $table->string('contraseña', 100);
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

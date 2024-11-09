@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();  // Genera una columna `id` autoincremental
             $table->string('nombre', 50);  // Columna para el nombre del rol
-            $table->timestamps();  // Genera las columnas `created_at` y `updated_at`
+            //$table->timestamps();  // Genera las columnas `created_at` y `updated_at`
         });
     }
 

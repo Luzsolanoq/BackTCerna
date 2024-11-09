@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_rol')->constrained('roles')->onDelete('cascade');
             $table->foreignId('id_permiso')->constrained('permisos')->onDelete('cascade');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 
